@@ -1013,6 +1013,7 @@ blockquote {
     .about-photo img {
         max-height: 420px;
         aspect-ratio: auto;
+        object-position: center 12%;
     }
 
     .contact-grid {
