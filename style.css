@@ -956,6 +956,13 @@ blockquote {
     margin: 2rem 0;
 }
 
+.article-sources {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
 .author-box {
     display: flex;
     align-items: center;
