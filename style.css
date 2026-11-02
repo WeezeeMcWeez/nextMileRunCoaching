@@ -545,6 +545,48 @@ blockquote {
 
 .package-body .btn { width: 100%; }
 
+/* Holiday special */
+.package-img { position: relative; }
+
+.holiday-ribbon {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    z-index: 1;
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--font-head);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0.45rem 1rem;
+    border-radius: 0 100px 100px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.price-was {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    margin-right: 0.35rem;
+}
+
+
+.package-price span { white-space: nowrap; }
+
+.price-note {
+    font-size: 0.85rem;
+    color: var(--accent-dark);
+    font-weight: 600;
+    line-height: 1.5;
+    margin: -0.4rem 0 1.1rem;
+}
+
+.price-note strong { color: var(--navy); }
+
 /* Group photo */
 .group-photo {
     border-radius: var(--radius);
@@ -557,6 +599,63 @@ blockquote {
     height: 100%;
     object-fit: cover;
     object-position: center 52%;
+}
+
+/* ===== REVIEWS ===== */
+#reviews {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: var(--off-white);
+    border-radius: var(--radius);
+    border-top: 4px solid var(--accent);
+    padding: 2.25rem 2rem 2rem;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.review-quote-mark {
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    line-height: 0.6;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.review-card blockquote {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.review-card figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.review-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.review-date {
+    font-size: 0.82rem;
+    color: var(--text-muted);
 }
 
 /* ===== CTA BANNER ===== */
@@ -1087,7 +1186,11 @@ blockquote {
     .header-inner { padding: 0.85rem 1.25rem; }
     .container { padding: 0 1.25rem; }
 
-    #about, #coaching, #contact { padding: 4rem 0; }
+    #about, #coaching, #reviews, #contact { padding: 4rem 0; }
+
+    .reviews-grid { grid-template-columns: 1fr; }
+
+    .review-card { padding: 2rem 1.35rem 1.75rem; }
     #cta { padding: 3.5rem 0; }
     #footer { padding: 2.5rem 0 0; }
 
