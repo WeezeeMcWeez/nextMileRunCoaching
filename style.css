@@ -607,11 +607,11 @@ blockquote {
     background: var(--white);
 }
 
+/* Two balanced columns; cards flow top-to-bottom so long and short reviews pack together */
 .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    max-width: 760px;
+    columns: 2;
+    column-gap: 1.5rem;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -621,7 +621,8 @@ blockquote {
     border-top: 4px solid var(--accent);
     padding: 2.25rem 2rem 2rem;
     box-shadow: var(--shadow-sm);
-    text-align: center;
+    break-inside: avoid;
+    margin: 0 0 1.5rem;
 }
 
 .review-quote-mark {
@@ -637,9 +638,11 @@ blockquote {
     background: none;
     padding: 0;
     margin: 0 0 1.5rem;
-    font-size: 1.08rem;
+    font-size: 1.02rem;
     line-height: 1.75;
 }
+
+.review-card blockquote p + p { margin-top: 0.9rem; }
 
 .review-card figcaption {
     display: flex;
@@ -1188,7 +1191,7 @@ blockquote {
 
     #about, #coaching, #reviews, #contact { padding: 4rem 0; }
 
-    .reviews-grid { grid-template-columns: 1fr; }
+    .reviews-grid { columns: 1; }
 
     .review-card { padding: 2rem 1.35rem 1.75rem; }
     #cta { padding: 3.5rem 0; }
